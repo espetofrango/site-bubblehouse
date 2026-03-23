@@ -4,7 +4,10 @@ export const metadata = {
   title: 'Aluguel de Bubble House | Luxo e Sofisticação no RJ',
   description: 'Especialistas em aluguel de Bubble House, Castelo Inflável Branco e Piscina de Bolinhas Branca para festas e eventos de luxo no Rio de Janeiro.',
   icons: {
-    icon: '/favicon.png',
+    icon: [
+      { url: '/favicon.png' },
+      { url: '/favicon.png', sizes: '32x32', type: 'image/png' },
+    ],
     shortcut: '/favicon.png',
     apple: '/favicon.png',
   },

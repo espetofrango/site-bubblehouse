@@ -11,10 +11,10 @@ export default function Header() {
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          <Link href="/" className="font-serif text-2xl font-bold text-gray-900 tracking-tight flex items-center gap-3">
-             <Image src="/bubble house logo favicon.png" alt="Bubble House Logo" width={48} height={48} className="object-contain" />
-             <span>Bubble House<span className="text-primary-600">.</span></span>
+        <div className="flex justify-center sm:justify-between items-center h-20">
+          <Link href="/" className="font-serif text-xl sm:text-2xl font-bold text-gray-900 tracking-tight flex items-center gap-2 sm:gap-3">
+             <Image src="/favicon.png" alt="Bubble House Logo" width={40} height={40} className="object-contain sm:w-12 sm:h-12" />
+             <span className="whitespace-nowrap">Bubble House<span className="text-primary-600">.</span></span>
           </Link>
           
           <nav className="hidden md:flex space-x-8">
