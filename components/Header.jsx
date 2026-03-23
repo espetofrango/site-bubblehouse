@@ -60,12 +60,12 @@ export default function Header() {
       </div>
 
       {/* Menu Lateral Mobile (Overlay) */}
-      <div className={`fixed inset-0 z-[9999] md:hidden transition-all duration-300 ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+      <div className={`fixed inset-0 mobile-menu-overlay md:hidden transition-all duration-300 ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
         {/* Backdrop */}
         <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setIsMenuOpen(false)}></div>
         
         {/* Drawer Content */}
-        <div className={`absolute top-0 right-0 w-[80%] max-w-sm h-full bg-white shadow-[-10px_0_30px_rgba(0,0,0,0.1)] transition-transform duration-300 transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        <div className={`absolute top-0 right-0 w-[80%] max-w-sm h-full mobile-menu-drawer shadow-[-10px_0_30px_rgba(0,0,0,0.1)] transition-transform duration-300 transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
           <div className="flex flex-col h-full p-6">
             <div className="flex justify-between items-center mb-8">
               <span className="font-serif text-xl font-bold">Menu</span>
