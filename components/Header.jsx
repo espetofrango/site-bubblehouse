@@ -20,7 +20,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${isMenuOpen ? 'bg-white' : 'bg-white/95 sm:bg-white/90'} backdrop-blur-md border-b border-gray-100 shadow-sm`}>
+    <header className={`fixed w-full z-50 transition-all duration-300 ${isMenuOpen ? 'bg-[#ffffff] opacity-100' : 'bg-white/95 sm:bg-white/90 backdrop-blur-md'} border-b border-gray-100 shadow-sm`}>
       <div className="bg-primary-900 text-primary-50 py-2 px-4 text-xs font-medium tracking-wide flex justify-center items-center gap-6 hidden sm:flex">
         <span className="flex items-center gap-2"><Phone size={14} /> (21) 96499-4409</span>
         <span className="flex items-center gap-2"><Mail size={14} /> contato@bubblehousealuguel.com.br</span>
@@ -59,64 +59,64 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Menu Lateral Mobile (Overlay) */}
+      {/* Menu Lateral Mobile (Overlay/Drawer) */}
       <div 
-        className={`fixed inset-0 md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}
-        style={{ zIndex: 9998 }}
+        className={`fixed inset-0 md:hidden ${isMenuOpen ? 'block opacity-100' : 'hidden opacity-0'}`}
+        style={{ zIndex: 9999 }}
       >
-        {/* Backdrop */}
+        {/* Backdrop (Escurecimento do fundo) */}
         <div 
-          className="absolute inset-0 bg-black/60 backdrop-blur-sm" 
+          className="absolute inset-0 bg-black/60" 
           onClick={() => setIsMenuOpen(false)}
         ></div>
         
-        {/* Drawer Content */}
+        {/* Drawer Content - BRANCO SÓLIDO SEM TRANSPARÊNCIA */}
         <div 
-          className={`absolute top-0 right-0 w-[80%] max-w-sm h-full transition-transform duration-300 transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
+          className={`absolute top-0 right-0 w-[85%] max-w-sm h-full bg-[#ffffff] !bg-white opacity-100 !opacity-100 shadow-2xl transition-transform duration-300 transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
           style={{ 
             backgroundColor: '#ffffff', 
             opacity: 1, 
-            zIndex: 9999, 
+            zIndex: 10000, 
             position: 'fixed',
             right: 0,
             top: 0
           }}
         >
-          <div className="flex flex-col h-full p-6">
-            <div className="flex justify-between items-center mb-8">
-              <span className="font-serif text-xl font-bold text-black">Menu</span>
+          <div className="flex flex-col h-full p-6 bg-[#ffffff]">
+            <div className="flex justify-between items-center mb-10">
+              <span className="font-serif text-2xl font-bold text-black opacity-100">Menu</span>
               <button 
-                className="p-2 text-black" 
+                className="p-2 text-black hover:text-primary-600 transition-colors opacity-100" 
                 onClick={() => setIsMenuOpen(false)}
               >
-                <X size={28} />
+                <X size={32} />
               </button>
             </div>
             
-            <nav className="flex flex-col gap-6">
-              <Link href="/" className="text-lg font-bold text-black border-b border-gray-100 pb-2" onClick={() => setIsMenuOpen(false)}>Início</Link>
-              <Link href="/aluguel-de-bubble-house-rj" className="text-lg font-bold text-black border-b border-gray-100 pb-2" onClick={() => setIsMenuOpen(false)}>Bubble House</Link>
-              <Link href="/aluguel-de-castelo-inflavel-branco-rj-luxo" className="text-lg font-bold text-black border-b border-gray-100 pb-2" onClick={() => setIsMenuOpen(false)}>Castelo Inflável</Link>
-              <Link href="/aluguel-de-piscina-de-bolinhas-branca-rj" className="text-lg font-bold text-black border-b border-gray-100 pb-2" onClick={() => setIsMenuOpen(false)}>Piscina de Bolinhas</Link>
-              <Link href="/blog" className="text-lg font-bold text-black border-b border-gray-100 pb-2" onClick={() => setIsMenuOpen(false)}>Blog</Link>
-              <Link href="/sobre-nos-bubble-house-aluguel" className="text-lg font-bold text-black border-b border-gray-100 pb-2" onClick={() => setIsMenuOpen(false)}>Sobre</Link>
+            <nav className="flex flex-col gap-8">
+              <Link href="/" className="text-xl font-bold text-black hover:text-primary-600 border-b border-gray-100 pb-3" onClick={() => setIsMenuOpen(false)}>Início</Link>
+              <Link href="/aluguel-de-bubble-house-rj" className="text-xl font-bold text-black hover:text-primary-600 border-b border-gray-100 pb-3" onClick={() => setIsMenuOpen(false)}>Bubble House</Link>
+              <Link href="/aluguel-de-castelo-inflavel-branco-rj-luxo" className="text-xl font-bold text-black hover:text-primary-600 border-b border-gray-100 pb-3" onClick={() => setIsMenuOpen(false)}>Castelo Inflável</Link>
+              <Link href="/aluguel-de-piscina-de-bolinhas-branca-rj" className="text-xl font-bold text-black hover:text-primary-600 border-b border-gray-100 pb-3" onClick={() => setIsMenuOpen(false)}>Piscina de Bolinhas</Link>
+              <Link href="/blog" className="text-xl font-bold text-black hover:text-primary-600 border-b border-gray-100 pb-3" onClick={() => setIsMenuOpen(false)}>Blog</Link>
+              <Link href="/sobre-nos-bubble-house-aluguel" className="text-xl font-bold text-black hover:text-primary-600 border-b border-gray-100 pb-3" onClick={() => setIsMenuOpen(false)}>Sobre</Link>
             </nav>
             
-            <div className="mt-auto pt-8">
+            <div className="mt-auto pt-10">
               <a 
                 href="https://wa.me/5521964994409" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="btn-primary w-full text-center py-4 text-base font-bold text-white bg-primary-600 rounded-sm"
+                className="w-full flex justify-center py-4 text-lg font-bold text-white bg-primary-600 rounded-lg shadow-lg hover:bg-primary-700 transition-all"
                 onClick={() => setIsMenuOpen(false)}
-                style={{ backgroundColor: '#D4AF37 !important' }} 
+                style={{ backgroundColor: '#D4AF37' }}
               >
-                Solicitar Orçamento
+                SOLICITAR ORÇAMENTO
               </a>
               
-              <div className="flex flex-col gap-3 mt-8 text-sm text-black font-semibold">
-                <span className="flex items-center gap-2"><Phone size={16} /> (21) 96499-4409</span>
-                <span className="flex items-center gap-2"><Mail size={16} className="shrink-0" /> contato@bubblehousealuguel.com.br</span>
+              <div className="flex flex-col gap-4 mt-10 text-base text-black font-bold">
+                <span className="flex items-center gap-3"><Phone size={20} className="text-primary-600" /> (21) 96499-4409</span>
+                <span className="flex items-center gap-3 leading-tight"><Mail size={20} className="text-primary-600 shrink-0" /> contato@bubblehousealuguel.com.br</span>
               </div>
             </div>
           </div>
