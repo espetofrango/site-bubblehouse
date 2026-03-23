@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function Hero() {
   return (
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-primary-50">
-      
+
       {/* Abstract Background Elements to simulate a premium look without an image initially */}
       <div className="absolute top-0 right-0 -translate-y-12 translate-x-1/3 w-[800px] h-[800px] bg-primary-200/40 rounded-full blur-3xl opacity-50 z-0 pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-[600px] h-[600px] bg-white rounded-full blur-3xl opacity-60 z-0 pointer-events-none"></div>
@@ -29,14 +29,14 @@ export default function Hero() {
               </a>
             </div>
           </div>
-          
+
           <div className="relative h-[400px] lg:h-[600px] w-full rounded-3xl overflow-hidden shadow-2xl block">
-            <Image 
-              src="/aluguel-de-bubble-house-1.png" 
-              alt="Bubble House premium event" 
-              fill 
+            <Image
+              src="/aluguel-de-bubble-house-1.png"
+              alt="Bubble House premium event"
+              fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover" 
+              className="object-cover"
               priority
             />
           </div>
