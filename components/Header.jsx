@@ -60,17 +60,33 @@ export default function Header() {
       </div>
 
       {/* Menu Lateral Mobile (Overlay) */}
-      <div className={`fixed inset-0 mobile-menu-overlay md:hidden transition-all duration-300 ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+      <div 
+        className={`fixed inset-0 md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}
+        style={{ zIndex: 9998 }}
+      >
         {/* Backdrop */}
-        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setIsMenuOpen(false)}></div>
+        <div 
+          className="absolute inset-0 bg-black/60 backdrop-blur-sm" 
+          onClick={() => setIsMenuOpen(false)}
+        ></div>
         
         {/* Drawer Content */}
-        <div className={`absolute top-0 right-0 w-[80%] max-w-sm h-full mobile-menu-drawer shadow-[-10px_0_30px_rgba(0,0,0,0.1)] transition-transform duration-300 transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        <div 
+          className={`absolute top-0 right-0 w-[80%] max-w-sm h-full transition-transform duration-300 transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
+          style={{ 
+            backgroundColor: '#ffffff', 
+            opacity: 1, 
+            zIndex: 9999, 
+            position: 'fixed',
+            right: 0,
+            top: 0
+          }}
+        >
           <div className="flex flex-col h-full p-6">
             <div className="flex justify-between items-center mb-8">
-              <span className="font-serif text-xl font-bold">Menu</span>
+              <span className="font-serif text-xl font-bold text-black">Menu</span>
               <button 
-                className="p-2 text-gray-900" 
+                className="p-2 text-black" 
                 onClick={() => setIsMenuOpen(false)}
               >
                 <X size={28} />
@@ -78,12 +94,12 @@ export default function Header() {
             </div>
             
             <nav className="flex flex-col gap-6">
-              <Link href="/" className="text-lg font-medium text-gray-900 border-b border-gray-50 pb-2" onClick={() => setIsMenuOpen(false)}>Início</Link>
-              <Link href="/aluguel-de-bubble-house-rj" className="text-lg font-medium text-gray-900 border-b border-gray-50 pb-2" onClick={() => setIsMenuOpen(false)}>Bubble House</Link>
-              <Link href="/aluguel-de-castelo-inflavel-branco-rj-luxo" className="text-lg font-medium text-gray-900 border-b border-gray-50 pb-2" onClick={() => setIsMenuOpen(false)}>Castelo Inflável</Link>
-              <Link href="/aluguel-de-piscina-de-bolinhas-branca-rj" className="text-lg font-medium text-gray-900 border-b border-gray-50 pb-2" onClick={() => setIsMenuOpen(false)}>Piscina de Bolinhas</Link>
-              <Link href="/blog" className="text-lg font-medium text-gray-900 border-b border-gray-50 pb-2" onClick={() => setIsMenuOpen(false)}>Blog</Link>
-              <Link href="/sobre-nos-bubble-house-aluguel" className="text-lg font-medium text-gray-900 border-b border-gray-50 pb-2" onClick={() => setIsMenuOpen(false)}>Sobre</Link>
+              <Link href="/" className="text-lg font-bold text-black border-b border-gray-100 pb-2" onClick={() => setIsMenuOpen(false)}>Início</Link>
+              <Link href="/aluguel-de-bubble-house-rj" className="text-lg font-bold text-black border-b border-gray-100 pb-2" onClick={() => setIsMenuOpen(false)}>Bubble House</Link>
+              <Link href="/aluguel-de-castelo-inflavel-branco-rj-luxo" className="text-lg font-bold text-black border-b border-gray-100 pb-2" onClick={() => setIsMenuOpen(false)}>Castelo Inflável</Link>
+              <Link href="/aluguel-de-piscina-de-bolinhas-branca-rj" className="text-lg font-bold text-black border-b border-gray-100 pb-2" onClick={() => setIsMenuOpen(false)}>Piscina de Bolinhas</Link>
+              <Link href="/blog" className="text-lg font-bold text-black border-b border-gray-100 pb-2" onClick={() => setIsMenuOpen(false)}>Blog</Link>
+              <Link href="/sobre-nos-bubble-house-aluguel" className="text-lg font-bold text-black border-b border-gray-100 pb-2" onClick={() => setIsMenuOpen(false)}>Sobre</Link>
             </nav>
             
             <div className="mt-auto pt-8">
@@ -91,13 +107,14 @@ export default function Header() {
                 href="https://wa.me/5521964994409" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="btn-primary w-full text-center py-4 text-base font-semibold"
+                className="btn-primary w-full text-center py-4 text-base font-bold text-white bg-primary-600 rounded-sm"
                 onClick={() => setIsMenuOpen(false)}
+                style={{ backgroundColor: '#D4AF37 !important' }} 
               >
                 Solicitar Orçamento
               </a>
               
-              <div className="flex flex-col gap-3 mt-8 text-sm text-gray-500">
+              <div className="flex flex-col gap-3 mt-8 text-sm text-black font-semibold">
                 <span className="flex items-center gap-2"><Phone size={16} /> (21) 96499-4409</span>
                 <span className="flex items-center gap-2"><Mail size={16} className="shrink-0" /> contato@bubblehousealuguel.com.br</span>
               </div>
