@@ -20,7 +20,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <header className={`fixed w-full z-50 transition-all duration-300 ${isMenuOpen ? 'bg-white' : 'bg-white/95 sm:bg-white/90'} backdrop-blur-md border-b border-gray-100 shadow-sm`}>
       <div className="bg-primary-900 text-primary-50 py-2 px-4 text-xs font-medium tracking-wide flex justify-center items-center gap-6 hidden sm:flex">
         <span className="flex items-center gap-2"><Phone size={14} /> (21) 96499-4409</span>
         <span className="flex items-center gap-2"><Mail size={14} /> contato@bubblehousealuguel.com.br</span>
@@ -60,12 +60,12 @@ export default function Header() {
       </div>
 
       {/* Menu Lateral Mobile (Overlay) */}
-      <div className={`fixed inset-0 z-[60] md:hidden transition-all duration-300 ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+      <div className={`fixed inset-0 z-[9999] md:hidden transition-all duration-300 ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
         {/* Backdrop */}
-        <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsMenuOpen(false)}></div>
+        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setIsMenuOpen(false)}></div>
         
         {/* Drawer Content */}
-        <div className={`absolute top-0 right-0 w-[80%] max-w-sm h-full bg-white shadow-2xl transition-transform duration-300 transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        <div className={`absolute top-0 right-0 w-[80%] max-w-sm h-full bg-white shadow-[-10px_0_30px_rgba(0,0,0,0.1)] transition-transform duration-300 transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
           <div className="flex flex-col h-full p-6">
             <div className="flex justify-between items-center mb-8">
               <span className="font-serif text-xl font-bold">Menu</span>
