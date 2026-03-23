@@ -34,6 +34,8 @@ export default function BlogPost() {
                 alt="Festas de Fim de Ano e Carnaval com Bubble House no RJ: Guia para 2025" 
                 fill 
                 className="object-cover hover:scale-105 transition-transform duration-700"
+                priority
+                quality={90}
               />
             </div>
             

@@ -34,6 +34,8 @@ export default function BlogPost() {
                 alt="Festas com Bubble House nos Melhores Bairros do RJ: Zona Sul, Norte e Oeste" 
                 fill 
                 className="object-cover hover:scale-105 transition-transform duration-700"
+                priority
+                quality={90}
               />
             </div>
             

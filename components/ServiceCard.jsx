@@ -10,7 +10,7 @@ export default function ServiceCard({ title, description, href, image, delay = 0
     >
       <div className="h-64 bg-primary-50 rounded-xl mb-8 flex items-center justify-center overflow-hidden border border-primary-100/50 relative">
         {image ? (
-          <Image src={image} alt={title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
+          <Image src={image} alt={title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" quality={90} />
         ) : (
           <span className="text-primary-300 font-serif italic text-lg opacity-60">Imagem Exclusiva</span>
         )}

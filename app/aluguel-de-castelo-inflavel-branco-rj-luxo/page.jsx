@@ -35,7 +35,7 @@ export default function AluguelCasteloBrancoRJ() {
         <section className="py-24 px-4 bg-white">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl border border-primary-100">
-             <Image src="/aluguel-1castelo-inflavel-branco-.png" alt="Castelo Inflável Branco Alto Padrão" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" priority />
+             <Image src="/aluguel-1castelo-inflavel-branco-.png" alt="Castelo Inflável Branco Alto Padrão" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" priority quality={90} />
             </div>
             
             <div>

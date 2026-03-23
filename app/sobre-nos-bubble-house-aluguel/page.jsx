@@ -51,6 +51,8 @@ export default function SobreNos() {
                 fill 
                 sizes="(max-width: 1024px) 100vw, 50vw" 
                 className="object-cover" 
+                priority
+                quality={90}
               />
             </div>
           </div>

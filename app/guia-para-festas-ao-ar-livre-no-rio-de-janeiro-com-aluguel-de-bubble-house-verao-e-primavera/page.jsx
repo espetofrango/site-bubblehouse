@@ -34,6 +34,8 @@ export default function BlogPost() {
                 alt="Guia para Festas ao Ar Livre no Rio de Janeiro com Aluguel de Bubble House" 
                 fill 
                 className="object-cover hover:scale-105 transition-transform duration-700"
+                priority
+                quality={90}
               />
             </div>
             
@@ -41,12 +43,6 @@ export default function BlogPost() {
               
 			
 <p className="mb-6 leading-relaxed text-gray-700 text-lg">O <strong>Rio de Janeiro</strong> é o cenário perfeito para festas ao ar livre, especialmente durante o <strong>verão</strong> e a <strong>primavera</strong>, quando o clima tropical da Cidade Maravilhosa brilha. Com o <strong>aluguel de Bubble House no RJ</strong>, você pode transformar qualquer evento – de <strong>aniversários infantis</strong> a <strong>casamentos</strong> ou <strong>chás de revelação</strong> – em uma celebração mágica em locais como <strong>Copacabana</strong>, <strong>Barra da Tijuca</strong>, <strong>Recreio</strong> ou <strong>Ipanema</strong>. Neste guia, descubra como planejar uma festa ao ar livre inesquecível com <strong>Bubble Houses de Luxo</strong> e brinquedos infláveis no RJ!</p>
-
-
-
-
-</figure>
-
 
 
 <h2 className="text-3xl font-serif font-bold text-gray-900 mt-12 mb-6">Por que o Verão e a Primavera são Ideais para Festas no RJ?</h2>

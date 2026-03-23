@@ -47,6 +47,8 @@ export default function BlogPost({ params }) {
                   alt="Decoração de luxo para festas com Bubble House" 
                   fill 
                   className="object-cover hover:scale-105 transition-transform duration-700"
+                  priority
+                  quality={90}
                 />
               </div>
 

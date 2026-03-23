@@ -34,6 +34,8 @@ export default function BlogPost() {
                 alt="Introdução ao Pula Pula Branco Aluguel" 
                 fill 
                 className="object-cover hover:scale-105 transition-transform duration-700"
+                priority
+                quality={90}
               />
             </div>
             

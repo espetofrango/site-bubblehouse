@@ -34,6 +34,8 @@ export default function BlogPost() {
                 alt="Ensaios Fotográficos Incríveis no RJ com Aluguel de Bubble House" 
                 fill 
                 className="object-cover hover:scale-105 transition-transform duration-700"
+                priority
+                quality={90}
               />
             </div>
             
