@@ -1,4 +1,5 @@
 import './globals.css';
+import WhatsAppButton from '../components/WhatsAppButton';
 
 export const metadata = {
   title: 'Aluguel de Bubble House | Luxo e Sofisticação no RJ',
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="flex flex-col min-h-screen">
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   );
