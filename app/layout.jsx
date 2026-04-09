@@ -21,6 +21,8 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        <meta name="google-site-verification" content="QV8oLW2_cT4UXbzgJB1mW2ca9nIuKqKAc6zjRjqwebY" />
+        <meta name="robots" content="index, follow" />
       </head>
       <body className="flex flex-col min-h-screen">
         {children}
